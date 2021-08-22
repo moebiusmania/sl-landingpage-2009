@@ -7,6 +7,7 @@ const pkg = require('./package.json');
 
 // Project related settings
 const ENV = process.env.NODE_ENV || 'development';
+const IS_PROD = ENV === 'production';
 const dist = './dist';
 const port = 8080;
 const notifications = false;
@@ -14,7 +15,7 @@ const notifications = false;
 // Webpack configuration | DON'T CHANGE
 const plugins = [
   new MiniCssExtractPlugin({
-    filename: "[name].css",
+    filename: IS_PROD ?  "[name].[contenthash].css" : "[name].css",
   }),
   new HtmlWebpackPlugin({
     title: pkg.displayName,
@@ -35,8 +36,9 @@ module.exports = {
   mode: ENV,
   output: {
     path: path.join(__dirname, dist),
-    filename: 'bundle.js',
-    chunkFilename: 'bundle.[chunk].js'
+    filename: IS_PROD ? 'bundle.[contenthash].js' : 'bundle.js',
+    chunkFilename: 'bundle.[chunk].js',
+    clean: true
   },
   plugins,
   devtool: 'source-map',
