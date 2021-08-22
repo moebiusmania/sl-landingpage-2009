@@ -1,7 +1,7 @@
 @import 'normalize.css';
 
-$lightBlue: rgb(0,204,255);
-
+$lightBlue: rgb(18,203,255);
+$textShadow: 1px 1px 3px rgba(0,0,0,0.2);
 
 body {
   min-height: 100vh;
@@ -35,7 +35,7 @@ main {
         font-weight: 300;
         margin-top: 0px;
         margin-bottom: 40px;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        text-shadow: $textShadow;
 
         &:last-child {
           text-shadow: none;
@@ -55,18 +55,51 @@ main {
       background: radial-gradient(#fff, $lightBlue, $lightBlue);
       position: relative;
 
+      .canvas {
+        position: relative;
+        height: 100%;
+      }
+
       img {
+        position: absolute;
         width: 330px;
         height: 363px;
-        position: absolute;
+        top: 0px;
+        left: 50px;
+        transition: all 1.5s linear;
       }
     }
   }
 
   footer {
+    margin-top: 20px;
+
     .dock {
+      .icons {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 105px;
+
+        a {
+          text-decoration: none;
+          opacity: 0.6;
+          transition: all 0.4s ease;
+          display: inline-block;
+          transform-origin: bottom;
+  
+          &:hover {
+            opacity: 1;
+            transform: scale(1.7);
+          }
+        }
+      } 
 
       .plane {
+        z-index: 1;
+        margin-top: -45px;
         height: 70px;
         background: linear-gradient( rgb(158, 220, 235), rgb(176, 238, 253));
         transform: perspective(190px) rotateX(45deg) scale(0.9);
@@ -77,6 +110,7 @@ main {
       margin-top: 0;
       font-size: 1.2em;
       text-align: center;
+      text-shadow: $textShadow;
     }
   }
 

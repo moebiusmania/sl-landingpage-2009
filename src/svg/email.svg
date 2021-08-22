@@ -16,7 +16,7 @@
     <g id="sprite0" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
       <use height="36.85" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)" width="73.45" xlink:href="#shape1"/>
     </g>
-    <g id="shape1" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+    <g id="shape1" opacity="0.2" transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
       <path d="M70.2 3.2 Q72.2 5.2 72.95 8.05 73.45 10.1 73.45 13.6 L73.45 31.9 Q65.0 36.65 54.15 36.7 47.5 36.75 34.9 34.5 22.15 32.25 16.55 32.25 6.8 32.25 0.0 36.85 L0.0 13.65 Q0.0 10.1 0.5 8.05 1.25 5.25 3.25 3.25 5.25 1.2 8.15 0.5 L13.75 0.0 62.45 0.0 Q67.0 0.0 70.2 3.2" fill="#ffffff" fill-rule="evenodd" stroke="none"/>
     </g>
     <g id="shape2" transform="matrix(1.0, 0.0, 0.0, 1.0, 27.3, 52.55)">
