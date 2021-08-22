@@ -1,10 +1,10 @@
 {
-  "name": "frontend-starter-kit",
-  "displayName": "Mohole frontend starter kit",
-  "version": "2.0.0",
+  "name": "sl-landingpage-2009",
+  "displayName": "Salvatore Laisa | Landing Page 2009",
+  "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "https://github.com/mohole/frontend-starter-kit",
-  "author": "Salvatore Laisa <salvatore.laisa@mohole.it>",
+  "repository": "https://github.com/moebiusmania/sl-landingpage-2009",
+  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --hot",
@@ -26,6 +26,6 @@
     "webpack-notifier": "1.13.0"
   },
   "dependencies": {
-    "bootstrap": "5.1.0"
+    "normalize.css": "8.0.1"
   }
 }

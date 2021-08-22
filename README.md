@@ -1,46 +1,14 @@
-# frontend-starter-kit
+# sl-landingpage-2009
 > Simple starter kit boilerplate based on Webpack, SASS and Bootstrap 5 (beta)
 
-## How to use
-Just clone the project in a new folder:
-```bash
-git clone https://github.com/mohole/frontend-starter-kit my-new-project
-```
+Built on top of my [frontend-starter-kit](https://github.com/mohole/frontend-starter-kit).
 
-install dependencies
-```bash
-cd my-new-project
-npm install 
-# or "npm i" as shortcut...
-```
+## Source material
+I've only had the compiled Flash Player `temp.swf` file available, but luckily for me I was able to de-compile it thanks to the awesome [jpexs-decompiler](https://github.com/jindrapetrik/jpexs-decompiler) tool the allowed me to get the original ActionScript code, the vector images and the objects data.
 
-and get started:
-```bash
-npm start
-```
-
-This will start a `webpack-dev-server` instance in `hot-reload` mode (*this will automatically update your browser when you apply any changes to the source files*), your project will be exposed at `localhost:8080`.
-
-To create the optimized files to publish to whaterver static hosting you choose, just run:
-```bash
-npm run build
-```
-
-the result will be available in the `./dist` folder.
-
-## Customizations
-To update the page title edit the `displayName` filed in the `package.json` file:
-
-```json
- "displayName": "Mohole frontend starter kit",
-```
-
-to change the port to expose the project and the folder to build to just update the related constants in the `webpack.config.js` file:
-
-```javascript
-const dist = './dist';
-const port = 8080;
-```
+In the `./src` folder I've added all of the available source material:
+* the original `temp.swf` file
+* in the `/as_source` the ActionScript files I've written back in the days
 
 ## License
 Released under the [MIT license](LICENSE).

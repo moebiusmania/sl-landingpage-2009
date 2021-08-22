@@ -1,10 +1,83 @@
-@import './../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'normalize.css';
 
-.bg-light{
-  transition: background-color 0.4s ease;
+$lightBlue: rgb(0,204,255);
 
-  &:hover{
-    background-color: #0099ee !important;
-    color: white;
+
+body {
+  min-height: 100vh;
+  background: $lightBlue;
+  font-family: 'Myriad Pro', sans-serif;
+}
+
+main {
+  width: 800px;
+  height: 700px;
+  margin: 30px auto;
+  color: #fff;
+
+  h1 {
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    font-size: 4.1em;
+    margin: 0;
   }
+
+  div.columns {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 330px 1fr;
+
+    article {
+      p {
+        font-size: 1.4em;
+        line-height: 1.15em;
+        font-weight: 400;
+        font-weight: 300;
+        margin-top: 0px;
+        margin-bottom: 40px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+        &:last-child {
+          text-shadow: none;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.3em;
+          line-height: 1.3em;
+        }
+      }
+    }
+
+    section {
+      min-height: 400px;
+      background: radial-gradient(#fff, $lightBlue, $lightBlue);
+      position: relative;
+
+      img {
+        width: 330px;
+        height: 363px;
+        position: absolute;
+      }
+    }
+  }
+
+  footer {
+    .dock {
+
+      .plane {
+        height: 70px;
+        background: linear-gradient( rgb(158, 220, 235), rgb(176, 238, 253));
+        transform: perspective(190px) rotateX(45deg) scale(0.9);
+      }
+    }
+
+    p {
+      margin-top: 0;
+      font-size: 1.2em;
+      text-align: center;
+    }
+  }
+
 }

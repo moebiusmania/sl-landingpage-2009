@@ -1,4 +1,10 @@
 
 import './styles/main.scss';
 
-console.log('Project started!')
+import SalvoToon from './svg/salvo.svg';
+
+const $ = (selector) => document.querySelector(selector);
+
+document.addEventListener('DOMContentLoaded', () => {
+  $('#salvo').src = SalvoToon;
+}); 
