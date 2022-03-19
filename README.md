@@ -22,17 +22,17 @@ In the `./src` folder I've added all of the available source material:
 
 ## Quick builds comparison
 
-Since Flash has always being surrounded by misconception and false myths, let's just compare the outputs created by both compilers:
+Since Flash has always being surrounded by misconception and false myths, let's just compare the outputs created by different compilers:
 
-| Flash .swf | New version |
-| ---------- | ----------- |
-| 39.2kb     | 58.1kb      |
+| Flash .swf | JS + Webpack | TS + Vite |
+| ---------- | ------------ | --------- |
+| 39.2kb     | 58.4kb       | 47.1kb    |
 
-For the "new version" of this repo I've got the size from the `Network` panel in Chrome dev tools running from an Incongito window, so it's counting every file in the build output folder (_html,css,svg,js_) while for the Flash version I'm just looking the file size (_you can do it directly in this repo_).
+For the "new versions" of this repo I've got the size from the `Network` panel in Chrome dev tools running from an Incongito window, so it's counting every file in the build output folder (_html,css,svg,js_) while for the Flash version I'm just looking the file size (_you can do it directly in this repo_).
 
 It's true that Flash files didn't ran as standalone entities in browsers, you always needed to wrap them in regular `.html` files, sometimes using a [particular Javascript utility](https://github.com/swfobject/swfobject) to detect the Flash Player and display an alternative content/message that has a `10.3kb` size.
 
-Beside being more or less 20kb smaller, the `.swf` file is **also** embedding the originally used font (_Myriad Pro_).
+Beside being more or less 8 to 20 kb smaller, the `.swf` file is **also** embedding the originally used font (_Myriad Pro_).
 
 So maybe a Flash based project wasn't necessarily a network-intensive beast as many claimed, especially compared to current web standard. And remember that in this specific case, the `.swf` file **has been compiled more than 10 years ago** 🙂.
 
