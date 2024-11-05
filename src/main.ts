@@ -1,4 +1,4 @@
-import "./style.scss";
+import "./style.css";
 
 import SalvoToon from "./svg/salvo.min.svg";
 import Fb from "./svg/fb.min.svg";
