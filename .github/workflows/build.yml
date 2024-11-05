@@ -10,20 +10,26 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [17.x]
+        node-version: [22.10]
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - name: 💻 Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build
 
-      - name: GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.0.1
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🏗️ Build static website
+        run: npm run build
+
+      - name: 🚀 Upload artifact 
+        uses: actions/upload-pages-artifact@v3
         with:
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: ./dist
+
+      - name: 🏁 Deploy to GitHub Pages
+        id: gh-pages
+        uses: actions/deploy-pages@v4

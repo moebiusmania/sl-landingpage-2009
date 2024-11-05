@@ -9,18 +9,17 @@
     "predev": "npm run svg:min",
     "prebuild": "npm run svg:min",
     "svg:min": "svgo ./src/svg/salvo.svg ./src/svg/email.svg ./src/svg/fb.svg ./src/svg/twitter.svg -o ./src/svg/salvo.min.svg ./src/svg/email.min.svg ./src/svg/fb.min.svg ./src/svg/twitter.min.svg",
-    "dev": "cross-env NODE_ENV=development  vite",
-    "build": "cross-env NODE_ENV=production tsc && vite build",
+    "dev": "NODE_ENV=development  vite",
+    "build": "NODE_ENV=production tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "sass": "^1.49.9",
-    "svgo": "^2.8.0",
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0"
+    "@types/node": "^22.9.0",
+    "svgo": "^3.3.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
     "normalize.css": "^8.0.1"
   }
 }

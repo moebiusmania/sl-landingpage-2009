@@ -1,11 +1,15 @@
 @import "normalize.css";
 
-$lightBlue: rgb(18, 203, 255);
-$textShadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+/* css variables */
+
+:root {
+  --light-blue: rgb(18, 203, 255);
+  --text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
 
 body {
   min-height: 100vh;
-  background: $lightBlue;
+  background: var(--light-blue);
   font-family: "Myriad Pro", sans-serif;
 }
 
@@ -15,33 +19,33 @@ main {
   margin: 30px auto;
   color: #fff;
 
-  h1 {
+  & h1 {
     font-weight: 400;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     font-size: 4.1em;
     margin: 0;
   }
 
-  div.columns {
+  &div.columns {
     margin-top: 25px;
     display: grid;
     grid-template-columns: 330px 1fr;
 
-    article {
-      p {
+    & article {
+      & p {
         font-size: 1.4em;
         line-height: 1.15em;
         font-weight: 400;
         font-weight: 300;
         margin-top: 0px;
         margin-bottom: 40px;
-        text-shadow: $textShadow;
+        text-shadow: var(--ar(--stext-)shadow);
 
         &:last-child {
           text-shadow: none;
         }
 
-        a {
+        & a {
           color: #fff;
           text-decoration: none;
           font-size: 1.3em;
@@ -50,17 +54,17 @@ main {
       }
     }
 
-    section {
+    & section {
       min-height: 400px;
-      background: radial-gradient(#fff, $lightBlue, $lightBlue);
+      background: radial-gradient(#fff, var(--light-blue), var(--light-blue));
       position: relative;
 
-      .canvas {
+      &.canvas {
         position: relative;
         height: 100%;
       }
 
-      img {
+      & img {
         position: absolute;
         width: 330px;
         height: 363px;
@@ -71,11 +75,11 @@ main {
     }
   }
 
-  footer {
+  & footer {
     margin-top: 20px;
 
-    .dock {
-      .icons {
+    & .dock {
+      & .icons {
         z-index: 2;
         position: relative;
         display: flex;
@@ -83,7 +87,7 @@ main {
         justify-content: space-around;
         margin: 0 105px;
 
-        a {
+        & a {
           text-decoration: none;
           opacity: 0.6;
           transition: all 0.4s ease;
@@ -97,7 +101,7 @@ main {
         }
       }
 
-      .plane {
+      & .plane {
         z-index: 1;
         margin-top: -45px;
         height: 70px;
@@ -106,11 +110,11 @@ main {
       }
     }
 
-    p {
+    & p {
       margin-top: 0;
       font-size: 1.2em;
       text-align: center;
-      text-shadow: $textShadow;
+      text-shadow: var(--text-shadow);
     }
   }
 }
